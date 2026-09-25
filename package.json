@@ -33,6 +33,6 @@
     "@graphql-codegen/client-preset": "^6.2.0",
     "@graphql-codegen/introspection": "^6.1.0",
     "dotenv": "^18.0.3",
-    "typescript": "^6.0.3"
+    "typescript": "^7.0.2"
   }
 }
