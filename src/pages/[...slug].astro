@@ -4,10 +4,12 @@ import Hero from '../components/sections/Hero.astro';
 import Feature from '../components/sections/Feature.astro';
 import { prepr } from '../lib/prepr';
 import { GetPageBySlugDocument } from '../gql/graphql';
+import { getPreprHeaders } from '@preprio/toolkit/astro';
 
 // The home page has no slug in the URL; in Prepr its slug is '/'.
 const slug = Astro.params.slug ?? '/';
-const data = await prepr(GetPageBySlugDocument, { slug });
+// Prepr uses these headers (visitor ID, segments, A/B variant) to pick the right variant.
+const data = await prepr(GetPageBySlugDocument, { slug }, getPreprHeaders(Astro.request.headers));
 
 if (!data.Page) return Astro.rewrite('/404');
 const page = data.Page;
