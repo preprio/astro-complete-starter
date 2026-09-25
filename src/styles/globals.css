@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-size-mb-4xl: 2rem;
-  --font-size-mb-5xl: 2.675rem;
+  --text-mb-4xl: 2rem;
+  --text-mb-5xl: 2.675rem;
 
   --spacing-8xl: 90rem;
   --container-8xl: 90rem;
@@ -15,7 +15,7 @@
   --color-primary-600: #2563EB;
   --color-primary-700: #1D4ED8;
 
-  --color-secondary-500: #4748B;
+  --color-secondary-500: #64748B;
   --color-secondary-700: #334155;
 }
 /* Horizontal page gutter for section containers, matching the Acme Lease demo site. */
