@@ -18,3 +18,7 @@
   --color-secondary-500: #4748B;
   --color-secondary-700: #334155;
 }
+/* Horizontal page gutter for section containers, matching the Acme Lease demo site. */
+@utility p-spacing {
+  @apply px-4 sm:px-6 lg:px-8 xl:px-18 2xl:px-20;
+}
