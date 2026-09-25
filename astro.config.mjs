@@ -27,6 +27,12 @@ export default defineConfig({
   env: {
     schema: {
       PREPR_GRAPHQL_URL: envField.string({ context: 'server', access: 'secret' }),
+      PREPR_ENV: envField.enum({
+        context: 'server',
+        access: 'secret',
+        values: ['preview', 'production'],
+        default: 'production',
+      }),
     },
   },
 });

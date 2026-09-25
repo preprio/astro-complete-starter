@@ -2,11 +2,15 @@
 import { Font } from 'astro:assets';
 import NavBar from '../components/NavBar.astro';
 import PreprTrackingPixel from '@preprio/toolkit/astro/components/PreprTrackingPixel';
+import PreprToolbar from '@preprio/toolkit/astro/components/PreprToolbar';
 import { extractAccessToken } from '@preprio/toolkit';
-import { PREPR_GRAPHQL_URL } from 'astro:env/server';
+import { getToolbarProps } from '@preprio/toolkit/astro';
+import { PREPR_GRAPHQL_URL, PREPR_ENV } from 'astro:env/server';
 import '../styles/globals.css';
 
 const accessToken = extractAccessToken(PREPR_GRAPHQL_URL);
+const toolbarProps =
+  PREPR_ENV === 'preview' ? await getToolbarProps(Astro.request.headers, PREPR_GRAPHQL_URL) : null;
 ---
 
 <!doctype html>
@@ -24,5 +28,6 @@ const accessToken = extractAccessToken(PREPR_GRAPHQL_URL);
   <body style="font-family: var(--font-ubuntu)">
     <NavBar />
     <slot />
+    {toolbarProps && <PreprToolbar {...toolbarProps} />}
   </body>
 </html>
