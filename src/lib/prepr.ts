@@ -13,6 +13,9 @@ export async function prepr<TResult, TVariables>(
     headers: { 'Content-Type': 'application/json', ...headers },
     body: JSON.stringify({ query: print(document), variables }),
   });
+  if (!response.ok) {
+    throw new Error(`Prepr GraphQL request failed: ${response.status} ${response.statusText}`);
+  }
   const { data, errors } = await response.json();
   if (errors?.length) throw new Error(errors[0].message);
   return data;
