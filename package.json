@@ -8,15 +8,19 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build",
+    "build": "npm run codegen && astro check && astro build",
     "start": "node ./dist/server/entry.mjs",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "codegen": "graphql-codegen --config codegen.ts"
   },
   "dependencies": {
     "@astrojs/node": "^11.1.6",
+    "@graphql-typed-document-node/core": "^3.2.0",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.3.5",
+    "graphql": "^17.0.2",
+    "sharp": "^0.35.4",
     "tailwindcss": "^4.3.3"
   },
   "allowScripts": {
@@ -24,6 +28,10 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
+    "@graphql-codegen/cli": "^7.4.3",
+    "@graphql-codegen/client-preset": "^6.2.0",
+    "@graphql-codegen/introspection": "^6.1.0",
+    "dotenv": "^18.0.3",
     "typescript": "^6.0.3"
   }
 }

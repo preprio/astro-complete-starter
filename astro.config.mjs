@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig, fontProviders } from 'astro/config';
+import { defineConfig, envField, fontProviders } from 'astro/config';
 import node from '@astrojs/node';
 import tailwindcss from '@tailwindcss/vite';
 
@@ -19,5 +19,14 @@ export default defineConfig({
   ],
   vite: {
     plugins: [tailwindcss()],
+  },
+  image: {
+    // Domain of the Acme Lease demo images. Add your own asset domain here.
+    domains: ['demo-patterns.stream.prepr.io'],
+  },
+  env: {
+    schema: {
+      PREPR_GRAPHQL_URL: envField.string({ context: 'server', access: 'secret' }),
+    },
   },
 });

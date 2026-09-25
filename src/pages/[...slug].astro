@@ -2,11 +2,20 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/sections/Hero.astro';
 import Feature from '../components/sections/Feature.astro';
+import { prepr } from '../lib/prepr';
+import { GetPageBySlugDocument } from '../gql/graphql';
+
+// The home page has no slug in the URL; in Prepr its slug is '/'.
+const slug = Astro.params.slug ?? '/';
+const data = await prepr(GetPageBySlugDocument, { slug });
+
+if (!data.Page) return Astro.rewrite('/404');
+const page = data.Page;
 ---
 
 <Layout>
-  <Hero />
-  <Feature />
-  <Feature align="right" />
-  <Feature />
+  {page.content.map((element) => {
+    if (element.__typename === 'Hero') return <Hero item={element} />;
+    if (element.__typename === 'Feature') return <Feature item={element} />;
+  })}
 </Layout>
