@@ -14,6 +14,7 @@ const page = data.Page;
 ---
 
 <Layout>
+  <meta slot="head" property="prepr:id" content={page._id} />
   {page.content.map((element) => {
     if (element.__typename === 'Hero') return <Hero item={element} />;
     if (element.__typename === 'Feature') return <Feature item={element} />;
