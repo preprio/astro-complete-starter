@@ -2,8 +2,6 @@
 
 Check out the [Complete guide to Astro and Prepr](https://docs.prepr.io/connecting-a-front-end-framework/astro/astro-complete-guide) to learn more.
 
-> The guide URL above is to be confirmed.
-
 ## Setup
 
 Make sure to install the dependencies:
@@ -61,7 +59,7 @@ Start the production build:
 npm run start
 ```
 
-This runs `node ./dist/server/entry.mjs`, which serves the app using the `@astrojs/node` adapter in standalone mode.
+This runs `node --env-file-if-exists=.env ./dist/server/entry.mjs`, which serves the app using the `@astrojs/node` adapter in standalone mode and loads `.env` if one is present (host-provided environment variables still take precedence).
 
 Check out the [deployment documentation](https://docs.astro.build/en/guides/deploy/) for more information.
 
