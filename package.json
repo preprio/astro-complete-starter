@@ -17,7 +17,7 @@
   "dependencies": {
     "@astrojs/node": "^11.1.6",
     "@graphql-typed-document-node/core": "^3.2.0",
-    "@preprio/toolkit": "0.4.0",
+    "@preprio/toolkit": "0.4.1",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.3.5",
     "graphql": "^17.0.2",
