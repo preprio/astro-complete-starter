@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
-    "@graphql-codegen/cli": "^7.4.3",
+    "@graphql-codegen/cli": "^7.4.4",
     "@graphql-codegen/client-preset": "^6.2.0",
     "@graphql-codegen/introspection": "^6.1.0",
     "dotenv": "^18.0.3",
