@@ -15,24 +15,24 @@
     "codegen": "graphql-codegen --config codegen.ts"
   },
   "dependencies": {
-    "@astrojs/node": "^11.1.6",
+    "@astrojs/node": "^11.1.9",
     "@graphql-typed-document-node/core": "^3.2.0",
     "@preprio/toolkit": "0.4.0",
     "@tailwindcss/vite": "^4.3.3",
-    "astro": "^7.3.5",
+    "astro": "^7.4.4",
     "graphql": "^17.0.2",
-    "sharp": "^0.35.4",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4.3.3"
   },
   "allowScripts": {
     "esbuild": true
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.10",
-    "@graphql-codegen/cli": "^7.4.3",
-    "@graphql-codegen/client-preset": "^6.2.0",
+    "@astrojs/check": "^0.9.12",
+    "@graphql-codegen/cli": "^7.4.6",
+    "@graphql-codegen/client-preset": "^6.2.3",
     "@graphql-codegen/introspection": "^6.1.0",
-    "dotenv": "^18.0.3",
+    "dotenv": "^18.0.9",
     "typescript": "^6.0.3"
   }
 }
