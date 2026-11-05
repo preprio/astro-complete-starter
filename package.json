@@ -22,7 +22,7 @@
     "astro": "^7.4.4",
     "graphql": "^17.0.2",
     "sharp": "^0.35.5",
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "^4.3.4"
   },
   "allowScripts": {
     "esbuild": true
