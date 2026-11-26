@@ -18,8 +18,8 @@ importers:
         specifier: ^3.2.0
         version: 3.2.0(graphql@17.1.0)
       '@preprio/toolkit':
-        specifier: 0.4.0
-        version: 0.4.0
+        specifier: 0.4.3
+        version: 0.4.3
       '@tailwindcss/vite':
         specifier: ^4.3.5
         version: 4.3.5(vite@8.3.8(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1))
@@ -988,8 +988,8 @@ packages:
   '@oxc-project/types@0.159.0':
     resolution: {integrity: sha512-QWjWhxheluOJ82kDHNyps00UvRpQCtI34B5A/SzpgQycUD/79FuvT4I0aQIfE/bdPwKmX4QPftnywFBH6FxJhQ==}
 
-  '@preprio/toolkit@0.4.0':
-    resolution: {integrity: sha512-9f1XcbiFe85lw59sd104zlUnDgB/srjOVjAWoVLK0MaeRMEMgQ+pJc2emkbx3G/scJuEfqqXdeuV+bSAubuTIA==}
+  '@preprio/toolkit@0.4.3':
+    resolution: {integrity: sha512-tlRDGK54GPlSt3jYqoPDCq62EAwgE36zPOS2c/w5Al7JoEO0LRGYdiZyzYYP6VmBWKf6LfTm+s2R0b9pFb8Scg==}
     engines: {node: '>=18.17'}
     peerDependencies:
       next: '>=13'
@@ -4138,7 +4138,7 @@ snapshots:
 
   '@oxc-project/types@0.159.0': {}
 
-  '@preprio/toolkit@0.4.0':
+  '@preprio/toolkit@0.4.3':
     dependencies:
       '@vercel/stega': 1.1.0
       preact: 10.29.8
